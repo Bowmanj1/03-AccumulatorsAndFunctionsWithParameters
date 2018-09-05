@@ -7,8 +7,8 @@ This module demonstrates and practices:
   -- UNIT TESTING.
 
 Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Jacob Bowman.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import m4t_tester
 
@@ -38,7 +38,7 @@ def main():
 def run_test_sum_of_digits():
     """ Tests the  sum_of_digits   function. """
     # ------------------------------------------------------------------
-    # TODO: 2. Implement this TEST function, as follows:
+    # DONE: 2. Implement this TEST function, as follows:
     #
     #  Step 1:  This TEST function tests the  sum_of_digits  function.
     #    So read the doc-string of the  sum_of_digits  function
@@ -72,6 +72,20 @@ def run_test_sum_of_digits():
     # TO DO: 2 (continued).
     # Below this comment, add 3 more test cases of your own choosing.
     # ------------------------------------------------------------------
+    expected = 10
+    answer = sum_of_digits(1234)
+    print('Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 21
+    answer = sum_of_digits(9471)
+    print('Test 3 expected:', expected)
+    print('       actual:  ', answer)
+
+    expected = 24
+    answer = sum_of_digits(71628)
+    print('Test 4 expected:', expected)
+    print('       actual:  ', answer)
 
 
 def sum_of_digits(number):
@@ -135,8 +149,14 @@ def run_test_digits_in_cube():
     print('Testing the   digits_in_cube   function:')
     print('-----------------------------------------------------')
 
+    expected = 9
+    answer = digits_in_cube(5)
+    print('Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
 
 def digits_in_cube(n):
+    
     """
     What comes in:  A positive integer.
     What goes out:  The sum of the digits in the CUBE of the integer.
