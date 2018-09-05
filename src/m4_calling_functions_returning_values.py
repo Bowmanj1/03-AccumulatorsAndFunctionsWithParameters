@@ -156,7 +156,7 @@ def run_test_digits_in_cube():
 
 
 def digits_in_cube(n):
-    
+
     """
     What comes in:  A positive integer.
     What goes out:  The sum of the digits in the CUBE of the integer.
