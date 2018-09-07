@@ -10,7 +10,7 @@ Authors: David Mutchler, Dave Fisher, Vibha Alangar, Mark Hays, Amanda Stouder,
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
-
+import math as m
 
 def main():
     print_sequence1()
@@ -25,6 +25,10 @@ def main():
     print_sequence3f(100)
     draw_circles3()
     draw_circles_r3(100)
+    print_cosines()
+    cosf(100)
+    draw_cosines_and_sines()
+    draw_cos_sin_circles(100)
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -218,7 +222,7 @@ def print_cosines():
        68.9855097830147
     """
     # ------------------------------------------------------------------
-    # TODO: 8. Implement this function, per its doc-string above.
+    # DONE: 8. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     #
@@ -233,6 +237,11 @@ def print_cosines():
     print('--------------------------------------------------')
     print('Running print_cosines:')
     print('--------------------------------------------------')
+
+
+def cosf(n):
+    for k in range(n + 1):
+        print(80 * m.cos(k))
 
 
 def draw_cosines_and_sines():
@@ -250,7 +259,7 @@ def draw_cosines_and_sines():
     -- Waits for the user to press the mouse, then closes the window.
     """
     # ------------------------------------------------------------------
-    # TODO: 9. Implement this function, per its doc-string above.
+    # DONE: 9. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # ------------------------------------------------------------------
@@ -258,6 +267,15 @@ def draw_cosines_and_sines():
     print('--------------------------------------------------')
     print('Running draw_cosines_and_sines:  See graphics window')
     print('--------------------------------------------------')
+
+def draw_cos_sin_circles(n):
+    window4 = rg.RoseWindow(400, 400)
+    for k in range(n + 1):
+        point_2 = rg.Point(200 + (80 * m.cos(k)), 200 + (80 * m.sin(k)))
+        circle_4 = rg.Circle(point_2, 10)
+        circle_4.attach_to(window4)
+    window4.render()
+    window4.close_on_mouse_click()
 
 
 # ----------------------------------------------------------------------
