@@ -14,6 +14,7 @@ import rosegraphics as rg
 def main():
     two_circles()
     circle_and_rectangle()
+    lines()
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -114,6 +115,19 @@ def circle_and_rectangle():
 
 
 def lines():
+    window3 = rg.RoseWindow(400, 400)
+    line1 = rg.Line(rg.Point(7, 10), rg.Point(101, 214))
+    line1.thickness = 9
+    line1.attach_to(window3)
+    line2 = rg.Line(rg.Point(100, 110), rg.Point(300, 242))
+    line2.attach_to(window3)
+    window3.render()
+    window3.close_on_mouse_click()
+    midpoint = line1.get_midpoint()
+    print('-' * 60)
+    print('The midpoint of the thicker line is at', midpoint)
+    print('The x-coordinate of this midpoint is 54.0')
+    print('The y-coordinate of this midpoint is 112.0')
     """
     -- Constructs a rg.RoseWindow.
     -- Constructs and draws on the window two rg.Lines such that:
@@ -135,7 +149,7 @@ def lines():
 
     -- Waits for the user to press the mouse, then closes the window.
     """
-    # TODO: 4. Implement and test this function.
+    # DONE: 4. Implement and test this function.
 
 
 # ----------------------------------------------------------------------
